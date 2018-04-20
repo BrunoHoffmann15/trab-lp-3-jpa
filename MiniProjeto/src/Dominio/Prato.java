@@ -15,6 +15,7 @@ public class Prato {
 	private Long codPrato;
 	private String nome;
 	private String descricao;
+	private double valor;
 	
 	@Id
 	@GeneratedValue(generator = "inc")
@@ -39,6 +40,13 @@ public class Prato {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+	@Column(name = "valor", nullable = false)
+	public double getValor() {
+		return valor;
+	}
+	public void setValor(double valor) {
+		this.valor = valor;
 	}
 	
 	

@@ -9,21 +9,21 @@ import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table(name = "bebida")
-public class Bebida {
-	private Long codBebida;
+@Table(name = "cliente")
+public class Cliente {
+	private Long codCliente;
 	private String nome;
-	private double valor;
+	private String cpf;
 	
 	@Id
 	@GeneratedValue(generator = "inc")
 	@GenericGenerator(name = "inc", strategy = "increment")
-	@Column(name = "cod_bebida")
-	public Long getCodBebida() {
-		return codBebida;
+	@Column(name = "cod_cliente")
+	public Long getCodCliente() {
+		return codCliente;
 	}
-	public void setCodBebida(Long codBebida) {
-		this.codBebida = codBebida;
+	public void setCodCliente(Long codCliente) {
+		this.codCliente = codCliente;
 	}
 	@Column(name = "nome", nullable = false)
 	public String getNome() {
@@ -32,12 +32,12 @@ public class Bebida {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	@Column(name = "valor", nullable = false)
-	public double getValor() {
-		return valor;
+	@Column(name = "cpf", nullable = false)
+	public String getCpf() {
+		return cpf;
 	}
-	public void setValor(double valor) {
-		this.valor = valor;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	
 	
