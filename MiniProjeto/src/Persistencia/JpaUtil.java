@@ -15,6 +15,7 @@ public class JpaUtil {
 	}
 
 	public static void close() {
+		getEntityManager().close();
 		factory.close();
 	}
 }
